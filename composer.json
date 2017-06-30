@@ -1,0 +1,21 @@
+{
+    "name": "kowap/yii2-lightgallery",
+    "description": "lightgallery",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"," gallery"," photo"," video"," lightgallery"," plugin"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Biloborodov Ilya",
+            "email": "biloborodov.ilya@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "kowap\\lightGallery\\": ""
+        }
+    }
+}
