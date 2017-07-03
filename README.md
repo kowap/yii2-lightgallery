@@ -10,7 +10,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require kowap/yii2-lightgallery "*"
+composer require kowap/yii2-lightgallery
 ```
 
 or add
