@@ -1,4 +1,5 @@
 <?php
+
 namespace kowap\lightgallery;
 
 use yii\helpers\ArrayHelper;
@@ -45,7 +46,28 @@ class LightGalleryWidget extends \yii\base\Widget
         $view = $this->getView();
         LightGalleryAsset::register($view);
         $options = Json::encode($this->options);
-        $js = '$("#'.$this->id.'").lightGallery('.$options.');';
+        $js = '$("#' . $this->id . '").lightGallery(' . $options . ');';
         $view->registerJs($js);
+        $this->addCss();
+    }
+
+    public function addCss()
+    {
+        $css = "
+            .k-ld a img {
+                padding: 4px;
+                position: relative;
+                cursor: pointer;
+                width: 183px;
+                overflow: hidden;
+            }
+            .k-ld a{
+                border-bottom: none;
+                margin: 0 1px 1px 0;
+                transition: all 0.4s ease 0.1s;
+            }
+        ";
+        $this->getView()->registerCss($css);
+
     }
 }
