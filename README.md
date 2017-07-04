@@ -1,6 +1,6 @@
-lightgallery
+jQuery lightgallery for Yii2
 ============
-lightgallery
+More information about gallery [here](http://sachinchoolur.github.io/lightGallery/).
 
 Installation
 ------------
@@ -28,4 +28,24 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \kowap\lightGallery\AutoloadExample::widget(); ?>```
+<?php
+    echo \kowap\lightgallery\LightGalleryWidget::widget([
+        'items' => [
+            [
+                'thumb' => '../thumb/image_1.jpg',
+                'src' => '../big/image_1.jpg'
+            ],
+            [
+                'thumb' => '../thumb/image_2.jpg',
+                'src' => '../big/image_2.jpg'
+            ]
+        ],
+        // more options http://sachinchoolur.github.io/lightGallery/docs/api.html
+        'options' => [
+            'mode' => 'lg-zoom-in-big',
+            'download' => false,
+            'zoom' => false,
+            'share' => false
+        ]
+    ]);
+?>
